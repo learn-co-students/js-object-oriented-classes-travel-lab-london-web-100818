@@ -1,3 +1,13 @@
+const eastWest = [
+    '1st Avenue',
+    '2nd Avenue',
+    '3rd Avenue',
+    'Lexington Avenue',
+    'Park',
+    'Madison Avenue',
+    '5th Avenue'
+]
+
 class Driver {
     constructor(name, day) {
         this.name = name
@@ -18,16 +28,6 @@ class Route {
 
     blocksTravelled() {
 
-        const eastWest = [
-            '1st Avenue',
-            '2nd Avenue',
-            '3rd Avenue',
-            'Lexington Avenue',
-            'Park',
-            'Madison Avenue',
-            '5th Avenue'
-        ]
-    
         this.getHorizontalDiff = (beginningLocation, endingLocation) => {
             let start = null
             let end = null
@@ -51,6 +51,4 @@ class Route {
     estimatedTime(rushHour) {
         return !rushHour ? this.blocksTravelled() / 3 : this.blocksTravelled() / 2
     }
-
-
 }
